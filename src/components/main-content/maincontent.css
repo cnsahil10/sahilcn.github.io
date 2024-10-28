@@ -1,0 +1,575 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+.main-content {
+  height: 100vh;
+  padding: 20px 20px;
+  display: grid;
+  /* grid-template-columns: 83% 17%;
+  grid-template-rows: 100%; */
+  grid-template-columns: repeat(12, 100px);
+  grid-template-rows: repeat(9, 100px);
+  column-gap: 4px;
+}
+/* .content-left div{
+  background-color: rgb(231, 219, 205);
+} */
+.content-left {
+  display: grid;
+  grid-template-rows: repeat(9, 100px);
+  grid-template-columns: repeat(9, 100px);
+  gap: 15px;
+}
+.item-1 {
+  grid-area: 1/1/4/7;
+  border-radius: 15px;
+  font-size: 2.7vw;
+  display: grid;
+  grid-template-rows: 30% 70%;
+  grid-template-columns: 100%;
+  row-gap: 15px;
+  padding: 40px 30px 40px 30px;
+  /* background-color: rgb(231, 219, 205); */
+  animation: div1 0.5s ease 1.5s forwards;
+  transform-origin: bottom right;
+  font-family: "Roboto Condensed";
+  color: transparent;
+  background: linear-gradient(to top left, #833ab4, #fd1d1d, #3300fc);
+  background-clip: text;
+  visibility: hidden;
+}
+.diff {
+  animation: diff 0.5s ease 1.7s forwards;
+  margin: 0;
+}
+.intro {
+  font-weight: 700;
+  margin: 0;
+  animation: up 1s ease 2s forwards;
+  padding-top: 15px; /* Added padding-top */
+}
+h1 {
+  font-family: "Roboto Condensed";
+}
+.item-2 {
+  grid-area: 1/7/4/10;
+  border-radius: 15px;
+  background-color: rgb(86 84 73);
+  animation: div2 2s ease 0s;
+  position: relative;
+  z-index: 2;
+  color: transparent;
+}
+.item-2 img {
+  width: 330px;
+  height: 330px;
+  object-fit: cover;
+  border-radius: 15px;
+  animation: div2 2s ease 0s;
+}
+.item-3 {
+  grid-area: 4/1/7/6;
+  border-radius: 15px;
+  font-size: 1vw;
+  display: grid;
+  grid-template-rows: 20% 80%;
+  grid-template-columns: 100%;
+  row-gap: 25px;
+  padding: 20px;
+  /* background-color: rgb(231, 219, 205); */
+  animation: div3 0.5s ease 1.5s forwards;
+  transform-origin: bottom left;
+  color: transparent;
+  visibility: hidden;
+  background-color: black;
+}
+.item-3 div,
+.desc {
+  background: linear-gradient(to right, #0052d4, #4364f7, #6fb1fc);
+  background-clip: text;
+}
+.item-3 .about {
+  color: white;
+  margin: 0;
+}
+
+.desc {
+  margin: 0;
+  font-family: "Roboto Condensed";
+  font-size: 5vw;
+  font-weight: 700;
+  text-align: center;
+  animation: goup 2s ease 1s forwards;
+}
+.item-4 {
+  text-decoration: none;
+  color: transparent;
+  grid-area: 4/6/7/10;
+  border-radius: 15px;
+  font-size: 1.5vw;
+  font-family: "Times New Roman", Times, serif;
+  display: grid;
+  grid-template-rows: 30% 70%;
+  grid-template-columns: 100%;
+  row-gap: 55px;
+  padding: 20px;
+  /* background-color: rgb(86 84 73); */
+  background-color: transparent;
+  animation: div4 0.5s ease 1.5s forwards;
+  transform-origin: top;
+  transition: 0.35s;
+}
+.item4 p {
+  font-size: 1vw;
+}
+
+.item-4:hover {
+  will-change: transform;
+  transition: 0.35s;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  transform: scale(1.3) translateY(-100px);
+  box-shadow: 5px 5px 10px rgb(211, 211, 211);
+}
+.content-right {
+  grid-area: 1/11/7/14;
+  display: grid;
+  grid-template-rows: 100% 10%;
+  grid-template-columns: 100%;
+  gap: 15px;
+}
+.projects {
+  border-radius: 15px;
+  background-color: transparent;
+  animation: projects 0.5s ease 1.5s forwards;
+  transform-origin: left;
+  color: transparent;
+  visibility: hidden;
+}
+
+.row-head h1 {
+  font-family: "Roboto Condensed";
+  font-size: 2vw;
+  font-weight: 500;
+  color: black;
+  margin: 0;
+  animation: appear 1s ease 1.5s forwards;
+}
+.row h1 {
+  font-family: "Roboto Condensed";
+  font-size: 3vw;
+  font-weight: 600;
+  margin: 0;
+  animation: down 1s ease 1.5s forwards;
+}
+.value {
+  font-family: "Roboto Condensed";
+  font-size: 1vw;
+  font-weight: 400;
+  color: black;
+}
+.socials {
+  border-radius: 15px;
+  background-color: transparent;
+  animation: div1 0.5s ease 1.5s forwards;
+  transform-origin: bottom;
+  color: transparent;
+}
+.social-links {
+  visibility: hidden;
+  animation: showSocials 0.5s ease 1.5s forwards;
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #5433ff;
+  background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+}
+.social-links a {
+  color: white;
+  font-size: 2vw;
+  margin-top: 5px;
+}
+
+.social-links a:hover {
+  transform: scale(1.3);
+  transition: transform 0.2s ease;
+}
+
+@keyframes appear {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes down {
+  from {
+    transform: translateX(300px);
+  }
+
+  to {
+    background: linear-gradient(to top left, #eb0000, #95008a, #3300fc);
+    background-clip: text;
+    transform: translateX(0);
+  }
+}
+@keyframes up {
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    background: linear-gradient(to top left, #833ab4, #fd1d1d, #3300fc);
+    background-clip: text;
+    transform: translateX(0);
+  }
+}
+
+@keyframes goup {
+  from {
+    transform: scale(0);
+    transform: translateY(500x);
+  }
+  to {
+    transform: translateY(0px);
+    transform: scale(1.1);
+  }
+}
+
+@keyframes div1 {
+  from {
+    background-color: transparent;
+    color: transparent;
+    transform: scale(0);
+  }
+
+  to {
+    background-color: white;
+    /* color: #111315; */
+    background-clip: text;
+    visibility: visible;
+    transform: scale(1);
+    box-shadow: 5px 5px 10px rgb(211, 211, 211);
+  }
+}
+@keyframes diff {
+  from {
+  }
+
+  to {
+    color: black;
+  }
+}
+@keyframes projects {
+  from {
+    background-color: transparent;
+    color: transparent;
+    transform: scale(0);
+  }
+
+  to {
+    background-color: white;
+    visibility: visible;
+    transform: scale(1);
+    box-shadow: 5px 5px 10px rgb(211, 211, 211);
+  }
+}
+@keyframes div2 {
+  0%,
+  20%,
+  50% {
+    /* transform: scale(2); */
+    transform: scale(1.3) translate(-50px, 20px);
+  }
+  60%,
+  80% {
+    transform: scale(1.1) translate(-60px, 25px);
+  }
+  100% {
+    /* transform: scale(1); */
+    transform: scale(1) translate(0);
+    /* box-shadow:5px 5px 10px rgb(211, 211, 211); */
+  }
+}
+@keyframes div3 {
+  from {
+    opacity: 0;
+    background-color: transparent;
+    color: transparent;
+    transform: scale(0);
+  }
+
+  to {
+    visibility: visible;
+    opacity: 1;
+    /* color: black; */
+    transform: scale(1);
+    box-shadow: 5px 5px 10px rgb(211, 211, 211);
+  }
+}
+
+@keyframes div4 {
+  from {
+    opacity: 0;
+    background-color: transparent;
+    color: transparent;
+    transform: scale(0);
+  }
+
+  to {
+    opacity: 1;
+    background-color: rgb(232, 232, 232);
+    color: black;
+    transform: scale(1);
+    /* box-shadow:5px 5px 10px rgb(211, 211, 211); */
+  }
+}
+
+.reactjs {
+  display: grid;
+  /* flex-direction: column;
+  flex-wrap: wrap;
+  position: fixed; */
+  height: 550px;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(3, 10% 70% 20%);
+  gap: 3px;
+  padding: 20px;
+  align-items: center;
+  letter-spacing: 5px;
+  background: linear-gradient(to top left, #eb0000, #95008a, #3300fc);
+  background-clip: text;
+}
+
+@keyframes showSocials {
+  from {
+    visibility: hidden;
+    transform: scale(0);
+  }
+
+  to {
+    visibility: visible;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .content-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .item-1 {
+    grid-area: unset;
+    font-size: 7vw;
+    padding: 20px;
+  }
+
+  .item-2 {
+    grid-area: unset;
+    height: auto;
+    width: 100%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .item-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .item-3 {
+    grid-area: unset;
+    font-size: 4vw;
+    padding: 20px;
+  }
+
+  .item-4 {
+    grid-area: unset;
+    font-size: 4vw;
+    padding: 20px;
+  }
+
+  .content-right {
+    grid-area: unset;
+  }
+
+  .desc {
+    font-size: 8vw;
+  }
+
+  .item-4:hover {
+    scale: 1.05;
+    translate: 0;
+  }
+
+  .reactjs {
+    height: auto;
+    padding: 15px;
+  }
+
+  .row h1 {
+    font-size: 6vw; /* Increased from 5vw to 6vw */
+    word-wrap: break-word;
+    line-height: 1.4;
+    letter-spacing: 2px; /* Added for better readability */
+  }
+
+  .value {
+    font-size: 3.5vw; /* Kept at 3.5vw */
+    line-height: 1.4;
+    padding: 10px 0;
+  }
+
+  .social-links a {
+    font-size: 6vw;
+  }
+
+  .intro {
+    padding-top: 10px; /* Slightly less padding for mobile */
+  }
+}
+/* Add mobile-specific styles and animation */
+@media (max-width: 768px) {
+  @keyframes div2 {
+    0%, 20%, 50% {
+      transform: scale(0.8) translate(-20px, -100px); /* Reduced scale and translation */
+    }
+    60%, 80% {
+      transform: scale(0.6) translate(-20px, -20px); /* Smaller intermediate state */
+    }
+    100% {
+      transform: scale(1) translate(0);
+    }
+  }
+
+  .item-2 {
+    animation: div2 2s ease 0s; /* Slightly faster animation for mobile */
+  }
+
+  .item-2 img {
+    animation: div2 2s ease 0s;
+  }
+}
+
+/* For even smaller screens */
+@media (max-width: 480px) {
+  .row-head h1 {
+    font-size: 5vw; /* Even larger for smaller screens */
+  }
+}
+
+/* Tablet View (768px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main-content {
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    grid-template-columns: unset;
+    grid-template-rows: unset;
+  }
+
+  .content-left {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .item-1 {
+    grid-area: 1 / 1 / 2 / 2;
+    font-size: 4vw;
+    padding: 30px;
+  }
+
+  .item-2 {
+    grid-area: 1 / 2 / 3 / 3;
+    height: 100%;
+  }
+
+  .item-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .item-3 {
+    grid-area: 2 / 1 / 3 / 2;
+    font-size: 2vw;
+  }
+
+  .item-4 {
+    grid-area: 3 / 1 / 4 / 3;
+    font-size: 2.5vw;
+  }
+
+  .content-right {
+    grid-area: unset;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .reactjs {
+    height: auto;
+    padding: 30px;
+  }
+
+  .row-head h1 {
+    font-size: 3.5vw;
+  }
+
+  .row h1 {
+    font-size: 4.5vw; /* Increased from 3vw to 4.5vw */
+    word-wrap: break-word;
+    line-height: 1.4;
+    letter-spacing: 3px; /* Added for better readability with larger text */
+  }
+
+  .value {
+    font-size: 2vw; /* Kept at 2vw to maintain contrast with skills text */
+    line-height: 1.5;
+    padding: 15px 0;
+  }
+
+  .social-links {
+    padding: 20px 0;
+  }
+
+  .social-links a {
+    font-size: 4vw;
+  }
+
+  /* Adjust hover effects for tablet */
+  .item-4:hover {
+    scale: 1.1;
+    translate: 0px -50px;
+  }
+
+  .intro {
+    padding-top: 12px; /* Medium padding for tablet */
+  }
+}
+
+
+
+

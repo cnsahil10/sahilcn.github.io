@@ -1,0 +1,167 @@
+.nav-bar{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 60px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    align-items: center;
+    padding-left: 30px;
+    /* padding-bottom: 20px; */
+    gap: 100px;
+    font-size: 0.7vw;
+    border-radius: 20px;
+    /* background-color:rgb(231, 219, 205); */
+    background-color: transparent;
+    margin: 15px 20px 0px 20px;
+    color: black;
+    animation: nav 0.5s ease 1.5s forwards;
+    transform-origin: center;
+    color: transparent;
+}
+.flex-nav{
+    width:500px;
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+    /* grid-template-columns:100%; */
+    list-style: none;
+    margin-right: 30px; /* Added margin to the right */
+}
+@keyframes nav {
+    from{
+        color: transparent;
+        background-color: transparent;
+        transform: scale(0);
+    }
+    to{
+        background-color:white;
+        color: #111315;
+        transform: scale(1);
+        box-shadow:5px 5px 10px rgb(211, 211, 211);
+    }
+}
+.c{
+    border-radius: 3px;
+    width: 70%;
+    transition: 0.35s;
+    font-size: 0.7vw;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 3px;
+    width: 70%;
+    transition: 0.35s;
+    
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    animation: animate 1.7s ease 0s forwards;
+}
+
+
+
+.cv:hover a{
+    cursor: pointer;
+    transition: 0.35s;
+    color: white;
+    font-size: 1.3vw;
+    border-radius: 25px;
+    padding: 9px 13px 9px 13px;
+    background-color: #111315;
+}
+
+@keyframes animate {
+    0%,90%{
+        opacity: 0;
+        visibility: hidden;
+    }
+    100%{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@media (max-width: 768px) {
+  .nav-bar {
+    font-size: 2.5vw; /* Increased font size for mobile */
+    padding: 10px;
+    gap: 20px; /* Reduced gap */
+    margin: 10px;
+  }
+
+  .flex-nav {
+    width: auto; /* Changed from fixed width */
+    padding-right: 25px; /* Increased right padding for mobile */
+    margin-right: 15px; /* Added margin for mobile */
+  }
+
+  .cv a {
+    font-size: 2.5vw;
+    color: white;
+    background-color: #111315;
+    padding: 6px 10px;
+    border-radius: 25px;
+    transition: 0.35s;
+  }
+
+  /* Remove hover effect for mobile */
+  .cv:hover a {
+    font-size: 2.5vw; /* Keep the same size */
+    color: white;
+    background-color: #111315;
+    padding: 6px 10px;
+  }
+}
+
+/* For even smaller screens */
+@media (max-width: 480px) {
+  .nav-bar {
+    font-size: 3vw;
+  }
+
+  .flex-nav {
+    padding-right: 20px; /* Adjusted for smaller screens */
+    margin-right: 10px;
+  }
+
+  .cv a {
+    font-size: 3vw;
+    color: white;
+    background-color: #111315;
+    padding: 6px 10px;
+    border-radius: 25px;
+  }
+
+  .cv:hover a {
+    font-size: 3vw; /* Keep the same size */
+    color: white;
+    background-color: #111315;
+    padding: 6px 10px;
+  }
+}
+/* Tablet View */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .nav-bar {
+      font-size: 1.8vw;
+      padding: 15px;
+      gap: 30px;
+    }
+  
+    .flex-nav {
+      width: auto;
+      padding-right: 20px;
+    }
+  
+    .cv a {
+      font-size: 1.8vw;
+      padding: 8px 15px;
+      background-color: #111315;
+      color: white;
+      border-radius: 25px;
+    }
+  
+    .cv:hover a {
+      transform: scale(1.03);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
